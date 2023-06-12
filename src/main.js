@@ -36,6 +36,7 @@ async function findAdress(cep) {
 }
 
 // Evento de disparo para a função executar
+cep.addEventListener('blur', () => findAdress(cep.value))
 cep.addEventListener('keyup', (event) =>
   event.key === 'Enter' ? findAdress(cep.value) : null
 )
