@@ -1,5 +1,5 @@
 // Elementos HTML
-const $cep = document.querySelector('#cep')
+const campoCEP = document.querySelector('#cep')
 const ddd = document.querySelector('#ddd')
 const rua = document.querySelector('#rua')
 const bairro = document.querySelector('#bairro')
@@ -21,7 +21,7 @@ async function findAdress(cep) {
       throw Error('CEP não existente')
     }
 
-    $cep.value = findCEPjson.cep
+    campoCEP.value = findCEPjson.cep
     ddd.value = findCEPjson.ddd
     rua.value = findCEPjson.logradouro
     bairro.value = findCEPjson.bairro
@@ -36,10 +36,10 @@ async function findAdress(cep) {
 }
 
 // Evento de disparo para a função executar
-cep.addEventListener('keypress', (event) => 
-  event.key === 'Enter' ? findAdress(cep.value) : null
+campoCEP.addEventListener('keypress', (event) => 
+  event.key === 'Enter' ? findAdress(campoCEP.value) : null
 )
-cep.addEventListener('blur', () => findAdress(cep.value))
+campoCEP.addEventListener('blur', () => findAdress(campoCEP.value))
 
 clean.addEventListener('click', () => {
   cep.value = ''
