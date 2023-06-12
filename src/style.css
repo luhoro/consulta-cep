@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+}
+
+main {
+  border-radius: 24px;
+  box-shadow: 0px 0px 100px #bdbdbd;
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto 0 auto;
+  padding: 50px 40px;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+p {
+  color: #696969;
+  margin: 10px 30px;
+}
+
+form {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-box {
+  background-color: #eeeeee;
+  border-radius: 12px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.form-box label {
+  padding-left: 8px;
+}
+
+.form-box input {
+  padding: 5px 8px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+}
+
+.error-message {
+  color: #f16c6c;
+  position: absolute;
+  bottom: -35px;
+}
+
+.clean {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #a8a8a8;
+  cursor: pointer;
+}
+
+@media (max-width: 530px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

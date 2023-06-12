@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta CEP</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Consulta CEP</h1>
+      <p>
+        Digite o CEP e aaperte enter para o campo de endereço ser completado.
+      </p>
+
+      <form action="POST" id="cep-validation">
+        <div class="form-row">
+          <div class="form-box">
+            <label for="cep">Digite o seu CEP</label>
+            <input type="number" id="cep" placeholder="xxxxx-xxx" maxlength="9" required />
+          </div>
+          <div class="form-box">
+            <label for="ddd">DDD</label>
+            <input type="text" id="ddd" />
+          </div>
+
+        </div>
+
+        <div class="form-row">
+          <div class="form-box">
+            <label for="rua">Rua</label>
+            <input type="text" id="rua" placeholder="" />
+          </div>
+          <div class="form-box">
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" placeholder="" />
+          </div>
+
+        </div>
+
+        <div class="form-row">
+          <div class="form-box">
+            <label class="" for="cidade">Cidade</label>
+            <input class="" type="text" id="cidade" placeholder="" />
+          </div>
+          <div class="form-box">
+            <label for="uf">Estado</label>
+            <input type="text" id="uf" placeholder="" />
+          </div>
+        </div>
+
+        <span class="error-message"></span>
+        <button class="clean">Limpar</button>
+      </form>
+
+    </main>
+
+    <script src="src/main.js"></script>
+  </body>
+
+</html>
